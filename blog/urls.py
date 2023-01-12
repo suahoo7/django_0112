@@ -1,5 +1,5 @@
 from django.urls import path
 from . import views
 urlpatterns = [
-# 나중에 채움
+    path('',views.index) #URL이 ‘blog/’로 끝나면, views.py의 index() 함수 실행
 ]
