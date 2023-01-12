@@ -16,6 +16,10 @@ class Post(models.Model):
     def __str__(self):
         return f'[{self.pk}]_{self.title}' #: 수정일: {self.update_at}' #[번호] 제목
 
+    def get_absolute_url(self):
+        return f'/blog/{self.pk}'
+    
+
     # pk: 기본키로 레코드에 대한 고유한 값(중복 허용 안됨) 
     # 포스트의 번호를 primary key로 지정
 

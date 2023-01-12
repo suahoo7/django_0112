@@ -1,5 +1,18 @@
-<!--blog => templates => blog => index.html
- template 안에 blog 존재(reveal in file explorer)-->
+{% comment %} blog => templates => blog => index.html
+ template 안에 blog 존재(reveal in file explorer)
+
+• 템플릿 태그
+Ø {{ 변수 }}
+Ø {% tag	%}
+Ø {%	for	item	in	data_list %}
+<li> {{item.name}} </li>
+{%	endfor %}
+Ø {% if	블럭 %}
+{{ 변수1 }}
+{% else	%}
+{{ 변수2 }}
+{% endif %} {% endcomment %}
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -9,5 +22,16 @@
     </head>
     <body>
         <h1>Blog<h1>
+        {% for p in posts %}
+        <hr> <!--수평선 추가-->
+        <h2> <a href="{{	p.get_absolute_url }}">
+        {{p.title}}</h2></a>
+        <h4> {{p.created_at}}</h4>
+        <p>{{p.content}}</p>
+        
+        {% endfor %}
+
     </body>
 </html>
+
+

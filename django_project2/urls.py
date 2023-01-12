@@ -24,7 +24,7 @@ urlpatterns = [
 # • “127.0.0.1/admin/” 접속하면 관리자 페이지로 이동
 # – urls.py에 정의되어 있음
 
-
+#python manage.py runserver로 오류 점검
 
 
 
