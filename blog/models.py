@@ -18,3 +18,9 @@ class Post(models.Model):
 
     # pk: 기본키로 레코드에 대한 고유한 값(중복 허용 안됨) 
     # 포스트의 번호를 primary key로 지정
+
+# 모델을 수정한 경우, makemigrations 및 migrate 명령어 실행
+# Post라는 클래스를 수정했으므로 명령어를 실행해야 데이터베이스에 반영함
+# python manage.py makemigrations
+# python manage.py migrate
+# python manage.py runserver
